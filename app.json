@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Arbor",
+    "slug": "arbor-plantsitting",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/assets/images/icon.png",
+    "scheme": "arbor-app",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.arbor.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBp2DHeU5Ybxmc8zdqRhpPFVRrKhf1WrhE"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.arbor.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBp2DHeU5Ybxmc8zdqRhpPFVRrKhf1WrhE"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Arbor to access your camera to identify plants."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Arbor to use your location to find nearby plant sitters."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#2d6a4f"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

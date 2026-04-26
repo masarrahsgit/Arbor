@@ -1,50 +1,40 @@
-# Welcome to your Expo app 👋
+# Arbor 🌿
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A plant care and community plant-sitting app built with React Native and Expo.
 
-## Get started
+## Features
+- Plant identification using AI scanning
+- Watering reminders and plant health tracking
+- Community plant-sitting requests with map view
+- Real-time chat between plant owners and sitters
 
-1. Install dependencies
+## Setup
 
-   ```bash
-   npm install
-   ```
+1. Clone the repository:
+   git clone https://github.com/masarrahsgit/Arbor.git cd Arbor
 
-2. Start the app
+2. Install dependencies:
+   npm install --legacy-peer-deps
 
-   ```bash
-   npx expo start
-   ```
+3. Set up environment variables:
+   cp .env.example .env
+   Fill in your own API keys in `.env`
 
-In the output, you'll find options to open the app in a
+4. Start the app
+   npx expo start --tunnel
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Environment Variables
 
-## Get a fresh project
+See `.env.example` for required keys:
+- `EXPO_PUBLIC_SUPABASE_URL` — from your Supabase project settings
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY` — from your Supabase project settings
+- `EXPO_PUBLIC_GEMINI_API_KEY` — from Google AI Studio
+- `EXPO_PUBLIC_PLANT_ID_KEY` — from plant.id
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Tech Stack
+- React Native + Expo
+- Expo Router (file-based navigation)
+- Supabase (auth + database)
+- Google Gemini (plant identification)
+- React Native Maps
